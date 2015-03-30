@@ -8,6 +8,6 @@ module GimmeVins
       query: "#{query} vin"
     })
 
-    results.map { |r| r.content.scan(/[A-Z0-9]+{17}/) }.flatten
+    results.map { |r| r.content.scan(/[A-Z0-9]+{17}/) }.flatten.uniq
   end
 end
